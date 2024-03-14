@@ -1,0 +1,914 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TrainingPlacement.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Shri Vishwakarma Skill University – India’s First Government Skill University</title>
+
+    <meta name="robots" content="noindex, follow" />
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+    <!-- Favicon -->
+
+     <link rel="shortcut icon" href="https://svsu.ac.in/img/favicon.ico" type="image/x-icon">
+
+     <?php $baseurl="https://svsu.ac.in"; ?>
+
+    <!-- CSS
+
+	============================================ -->
+
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/vendor/slick.css">
+
+    <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
+
+    <link rel="stylesheet" href="assets/css/plugins/sal.css">
+
+    <link rel="stylesheet" href="assets/css/plugins/feather.css">
+
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome.min.css">
+
+    <link rel="stylesheet" href="assets/css/plugins/euclid-circulara.css">
+
+    <link rel="stylesheet" href="assets/css/plugins/swiper.css">
+
+    <link rel="stylesheet" href="assets/css/plugins/magnify.css">
+
+    <link rel="stylesheet" href="assets/css/plugins/odometer.css">
+
+    <link rel="stylesheet" href="assets/css/plugins/animation.css">
+
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap-select.min.css">
+
+    <link rel="stylesheet" href="assets/css/plugins/jquery-ui.css">
+
+    <link rel="stylesheet" href="assets/css/plugins/magnigy-popup.min.css">
+
+    <link rel="stylesheet" href="assets/css/plugins/plyr.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+
+
+<body>
+
+    <!-- Start Header Area -->
+
+    <style type="text/css">
+
+        marquee h3 {
+
+            font-size: 16px;
+
+            line-height: 1;
+
+            margin: 0;
+
+        }
+
+    </style>
+
+    <header class="rbt-header rbt-header-10">
+
+        <div class="rbt-sticky-placeholder"></div>
+
+        <!-- Start Header Top  -->
+
+        <div class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation">
+
+            <div class="container-fluid">
+
+                <div class="top-expended-wrapper">
+
+                    <div class="top-expended-inner rbt-header-sec align-items-center ">
+
+                        <div class="rbt-header-sec-col rbt-header-left d-none d-xl-block">
+
+                            <div class="rbt-header-content">
+
+                                <!-- Start Header Information List  -->
+
+                                <div class="header-info">
+
+                                    <ul class="rbt-information-list">
+
+                                       <li>
+
+                                            <a href="mailto:admissions@svsu.ac.in"><i class="fa-solid fa-envelope"></i>admissions@svsu.ac.in <span class="d-none d-xxl-block"></span></a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="mailto:info@svsu.ac.in"><i class="fa-solid fa-envelope"></i>info@svsu.ac.in <span class="d-none d-xxl-block"></span></a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="tel: 18001800147"><i class="feather-phone"></i>18001800147</a>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                                <!-- End Header Information List  -->
+
+                            </div>
+
+                        </div>
+
+                        <div class="rbt-header-sec-col rbt-header-center">
+
+                            <div class="rbt-header-content justify-content-start justify-content-xl-center">
+
+                                <div class="header-info">
+
+                                    <div class="rbt-header-top-news">
+
+                                        <div class="inner">
+
+                                            <div class="content">
+
+                                               <!--  <span class="rbt-badge variation-02 bg-color-primary color-white radius-round">Hot</span>
+
+                                                <span class="news-text"><img src="assets/images/icons/hand-emojji.svg" alt="Hand Emojji Images">  -->
+
+                                                    <marquee behavior="scroll" scrollamount="8" onmouseover="this.stop()" onmouseout="this.start()">
+
+                                                        <h3>
+
+                                                            <a target="_blank" href="https://www.onlineregistration.co.in/svsu-university">
+
+                                                                <font color="white"><img class="" src="https://www.svsu.ac.in/wp-content/uploads/2018/05/new.gif" alt="">Apply Online-Application Form for Admissions 2023-24</font>
+
+                                                            </a>
+
+                                                            <a target="_blank" href="https://svsu.ac.in/wp-content/uploads/2023/05/PROSPECTUS-23.pdf">
+
+                                                                <font color="white"><img class="" src="https://www.svsu.ac.in/wp-content/uploads/2018/05/new.gif" alt="">Download University Admissions Prospectus  2023-24</font>
+
+                                                            </a>
+
+                                                        </h3>
+
+                                                    </marquee>
+
+                                               
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="rbt-header-sec-col rbt-header-right mt_md--10 mt_sm--10">
+
+                            <div class="rbt-header-content justify-content-start justify-content-lg-end">
+
+                                <div class="header-info d-none d-xl-block">
+
+                                    <ul class="social-share-transparent">
+
+                                        <li>
+
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+
+                                <div class="rbt-separator d-none d-xl-block"></div>
+
+
+
+                                
+
+
+
+                                
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="header-info">
+
+                        <div class="top-bar-expended d-block d-lg-none">
+
+                            <button class="topbar-expend-button rbt-round-btn"><i class="feather-plus"></i></button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- End Header Top  -->
+
+        <div class="rbt-header-wrapper header-space-betwween header-sticky">
+
+            <div class="container-fluid">
+
+                <div class="mainbar-row rbt-navigation-center align-items-center">
+
+                    <div class="header-left rbt-header-content">
+
+                        <div class="header-info">
+
+                            <div class="logo">
+
+                                <a href="index.html">
+
+                                    <img src="assets/images/logo/logo.png" alt="SVSU">
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        
+
+                    </div>
+
+
+
+                    <div class="rbt-main-navigation d-none d-xl-block">
+
+                        <nav class="mainmenu-nav">
+
+                            <ul class="mainmenu">
+                                
+                                <li class="has-dropdown has-menu-child-item">
+                                    <a href="#">About
+                                        <i class="feather-chevron-down"></i>
+                                    </a>
+                                    <ul class="submenu">
+                                        <li class="has-dropdown"><a href="#">Vcs Message</a>
+                                         
+                                        </li>
+                                        <li class="has-dropdown"><a href="TeamIIC.aspx">Team IIC</a>
+                                           
+                                        </li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="has-dropdown has-menu-child-item">
+                                    <a href="#">Services
+                                        <i class="feather-chevron-down"></i>
+                                    </a>
+                                    <ul class="submenu">
+                                        <li class="has-dropdown"><a href="placementservices.aspx">Placement</a>
+                                         
+                                        </li>
+                                        <li class="has-dropdown"><a href="internship.aspx">Internship</a>
+                                           
+                                        </li>
+                                         <li class="has-dropdown"><a href="careercounseling.aspx">Career Counsling</a>
+                                           
+                                        </li>
+                                    </ul>
+                                </li>
+
+                               
+                                 <li class="has-dropdown has-menu-child-item">
+                                    <a href="#">Industry Partners 
+                                        <i class="feather-chevron-down"></i>
+                                    </a>
+                                    <ul class="submenu">
+                                         <li class="has-dropdown"><a href="intershippartner.aspx">Internship Partner</a>
+                                           
+                                        </li>
+                                        
+                                        <li class="has-dropdown"><a href="placementpartner.aspx">Placement Partners</a>
+                                         
+                                        </li>
+                                       
+                                    </ul>
+                                </li>
+
+
+
+                                  <li class="has-dropdown has-menu-child-item">
+                                    <a href="#">Gallery
+                                        <i class="feather-chevron-down"></i>
+                                    </a>
+                                    <ul class="submenu">
+                                        <li class="has-dropdown"><a href="#">Success Stories</a>
+                                         
+                                        </li>
+                                        <li class="has-dropdown"><a href="mediacoverage.aspx">Media Coverage</a>
+                                           
+                                        </li>
+                                         <li class="has-dropdown"><a href="#">Events</a>
+                                           
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                                <li class="has-dropdown has-menu-child-item">
+                                    <a href="#">Placement States
+                                        <i class="feather-chevron-down"></i>
+                                    </a>
+                                    <ul class="submenu">
+                                        <li class="has-dropdown"><a href="doc/Placement-Stats-2022-23.pdf" target="_blank">Session 2022-23</a>
+                                         
+                                        </li>
+                                        <li class="has-dropdown"><a href="doc/Placement-Stat-2022.pdf" target="_blank">Session 2021-22</a>
+                                           
+                                        </li>
+                                        <li class="has-dropdown"><a href="#">Session 2020-21</a>
+                                           
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                           
+                                 
+                             
+
+                                
+                                
+                                 
+
+
+
+
+                              
+                                <li class="with-megamenu has-menu-child-item position-static">
+                                    <a href="#">Call for Industry Partners<i class="feather-chevron-down"></i></a>
+                                    <!-- Start Mega Menu  -->
+                                    <div class="rbt-megamenu grid-item-3">
+                                        <div class="wrapper">
+                                            <div class="row row--15">
+                                                <div class="col-lg-12 col-xl-4 col-xxl-4 single-mega-item">
+                                                    <h3 class="rbt-short-title">Call for Placement Partners</h3>
+                                                    <ul class="mega-menu-item">
+                                                        <li><a href="PlacementPartner.aspx">Call for Placement Partners </a></li>
+                                                       
+                                                        </ul>
+                                                   
+                                                </div>
+
+                                                <div class="col-lg-12 col-xl-4 col-xxl-4 single-mega-item">
+                                                    <h3 class="rbt-short-title">Call for Internship Partners</h3>
+                                                    <ul class="mega-menu-item">
+                                                        <li><a href="InternshipPartner.aspx">Call for Internship Partners</a></li>
+                                                     
+                                                        </ul>
+                                                </div>
+                                               
+                                                <div class="col-lg-12 col-xl-4 col-xxl-4 single-mega-item">
+                                                    <div class="rbt-ads-wrapper">
+                                                        <a class="d-block" href="#"><img src="call-pic.png" alt="Education Images"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Mega Menu  -->
+                                </li>
+
+                                  <li class="has-dropdown has-menu-child-item">
+                                    <a href="https://alumni.svsu.ac.in/" target="_blank">Alumni
+                                        <i class="feather-chevron-down"></i>
+                                    </a>
+                                   
+                                </li>
+                                
+                            </ul>
+                        </nav>
+
+                    </div>
+
+
+
+                    <div class="header-right">
+
+
+
+                        <!-- Navbar Icons -->
+
+                        
+
+
+
+                        <div class="rbt-btn-wrapper d-none d-xl-block">
+
+                            <a class="rbt-btn rbt-marquee-btn marquee-auto btn-border-gradient radius-round btn-sm hover-transform-none" href="registration.aspx" target="_blank">
+
+                                <span data-text="Contact Us">Contact Us</span>
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- Start Mobile-Menu-Bar -->
+
+                        <div class="mobile-menu-bar d-block d-xl-none">
+
+                            <div class="hamberger">
+
+                                <button class="hamberger-button rbt-round-btn">
+
+                                    <i class="feather-menu"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Start Mobile-Menu-Bar -->
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+      
+
+        <a class="rbt-close_side_menu" href="javascript:void(0);"></a>
+
+    </header>
+<!-- Mobile Menu Section -->
+    <div class="popup-mobile-menu">
+        <div class="inner-wrapper">
+            <div class="inner-top">
+                <div class="content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/logo.png" alt="Education Logo Images">
+                        </a>
+                    </div>
+                    <div class="rbt-btn-close">
+                        <button class="close-button rbt-round-btn"><i class="feather-x"></i></button>
+                    </div>
+                </div>
+                <p class="description">Shri Vishwakarma Skill University</p>
+                <ul class="navbar-top-left rbt-information-list justify-content-start">
+                    <li>
+                        <a href="mailto:admissions@svsu.ac.in"><i class="feather-mail"></i>admissions@svsu.ac.in</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="feather-phone"></i>18001800147</a>
+                    </li>
+                </ul>
+            </div>
+
+            <nav class="mainmenu-nav">
+                <ul class="mainmenu">
+                    <li class="with-megamenu has-menu-child-item position-static">
+                        <a href="#">Home <i class="feather-chevron-down"></i></a>
+                       
+                    </li>
+
+                    <li class="with-megamenu has-menu-child-item">
+                        <a href="https://www.onlineregistration.co.in/svsu-university/#/home">Apply Online <i class="feather-chevron-down"></i></a>
+                       
+                    </li>
+
+                    <li class="has-dropdown has-menu-child-item">
+                        <a href="https://svsu.ac.in/contact">Contact Us
+                            <i class="feather-chevron-down"></i>
+                        </a>
+                        
+                    </li>
+
+                   
+                </ul>
+            </nav>
+
+            <div class="mobile-menu-bottom">
+                <div class="rbt-btn-wrapper mb--20">
+                    <a class="rbt-btn btn-border-gradient radius-round btn-sm hover-transform-none w-100 justify-content-center text-center" href="https://www.onlineregistration.co.in/svsu-university/#/home">
+                        <span>Apply Now</span>
+                    </a>
+                </div>
+
+                <div class="social-share-wrapper">
+                    <span class="rbt-short-title d-block">Connect With Us</span>
+                    <ul class="social-icon social-default transparent-with-border justify-content-start mt--20">
+                        <li><a href="https://www.facebook.com/">
+                                <i class="feather-facebook"></i>
+                            </a>
+                        </li>
+                        <li><a href="https://www.twitter.com">
+                                <i class="feather-twitter"></i>
+                            </a>
+                        </li>
+                        <li><a href="https://www.instagram.com/">
+                                <i class="feather-instagram"></i>
+                            </a>
+                        </li>
+                        <li><a href="https://www.linkdin.com/">
+                                <i class="feather-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+     <!-- end header aera -->
+        
+     <!-- Start body area -->
+
+
+      <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+
+
+
+            </asp:ContentPlaceHolder>
+
+
+
+
+
+
+
+
+    
+     <!-- end boday aera -->
+
+
+    <!-- Start Footer aera -->
+
+    <footer class="rbt-footer footer-style-1 bg-color-white overflow-hidden">
+
+        <div class="footer-top">
+
+            <div class="container">
+
+                <div class="row g-5">
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+
+                        <div class="footer-widget">
+
+                            <div class="logo">
+
+                                <a href="Index.aspx">
+
+                                    <img src="assets/images/logo/logo.png" alt="Edu-cause">
+
+                                </a>
+
+                            </div>
+
+
+
+                            <p class="description mt--20">Join the Skill Revolution!
+
+                            </p>
+
+
+
+                            <ul class="social-icon social-default justify-content-start">
+
+                                <li><a href="https://www.facebook.com/">
+
+                                        <i class="feather-facebook"></i>
+
+                                    </a>
+
+                                </li>
+
+                                <li><a href="https://www.twitter.com">
+
+                                        <i class="feather-twitter"></i>
+
+                                    </a>
+
+                                </li>
+
+                                <li><a href="https://www.instagram.com/">
+
+                                        <i class="feather-instagram"></i>
+
+                                    </a>
+
+                                </li>
+
+                                <li><a href="https://www.linkdin.com/">
+
+                                        <i class="feather-linkedin"></i>
+
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+
+
+                            <div class="contact-btn mt--30">
+
+                                <a class="rbt-btn hover-icon-reverse btn-border-gradient radius-round" href="https://svsu.ac.in/contact">
+
+                                    <div class="icon-reverse-wrapper">
+
+                                        <span class="btn-text">Contact With Us</span>
+
+                                        <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+
+                                        <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+
+                        <div class="footer-widget">
+
+                            <h5 class="ft-title">Useful Links</h5>
+
+                            <ul class="ft-link">
+
+                                  <li><a href="https://svsuskillschool.ac.in/" target="_blank">Feeder School</a></li>
+
+                      <li><a href="https://digitalojtdiary.svsu.ac.in" target="_blank">OJT Diary</a></li>
+
+                    <li><a href="https://svsu.ac.in/about/alumni"target="_blank">Alumni</a></li>
+
+                    <li><a href="https://edulog.svsu.ac.in/"target="_blank">Blog</a></li>
+
+                    <li><a href="https://mail.google.com/a/svsu.ac.in"target="_blank">SVSU Mail</a></li>
+
+                    <li ><a style="text-transform: none !important;" href="https://eoffice.svsu.ac.in"target="_blank">SVSU eOffice</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+
+                        <div class="footer-widget">
+
+                            <h5 class="ft-title">Forms & Downloads</h5>
+
+                            <ul class="ft-link">
+
+                                <li><a href="https://forms.gle/uRoAjSJzgttLwdGn9">Student Feedback of Teaching</a></li>
+
+                    <li><a href="https://forms.gle/pNn11UE9GkBeXkDi6">Student Feedback Generic Form</a></li>
+
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdm4ZnLNJS0cq2NY8xhmqaxHtRG9lbYPRw83YNHiw2F797yTg/viewform?usp=sf_link">IT Complaints Form-Staff Only</a></li>
+
+                     <li><a href="https://svsu.ac.in/notices/downloads">Downloads</a></li>
+
+                    
+
+                           
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+
+                        <div class="footer-widget">
+
+                            <h5 class="ft-title">Get Contact</h5>
+
+                            <ul class="ft-link">
+
+                                <li><span>Toll Free:</span> <a href="#">+91-124-2746800, 18001800147</a></li>
+
+                                <li><span>E-mail:</span> <a href="mailto:info@svsu.ac.in">info@svsu.ac.in</a></li>
+
+                            </ul>
+
+
+
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="rbt-separator-mid">
+
+            <div class="container">
+
+                <hr class="rbt-separator m-0">
+
+            </div>
+
+        </div>
+
+        <!-- Start Copyright Area  -->
+
+        <div class="copyright-area copyright-style-1 ptb--20">
+
+            <div class="container">
+
+                <div class="row align-items-center">
+
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
+
+                        <p class="rbt-link-hover text-center text-lg-start">Copyright © 2016 <a href="https://themeforest.net/user/rbt-themes">Shri Vishwakarma Skill University</a> All Rights Reserved</p>
+
+                    </div>
+
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
+
+                        <ul class="copyright-link rbt-link-hover justify-content-center justify-content-lg-end mt_sm--10 mt_md--10">
+
+                            <li><a href="#">Terms of service</a></li>
+
+                            <li><a href="privacy-policy.html">Privacy policy</a></li>
+
+                           
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- End Copyright Area  -->
+
+    </footer>
+
+    <!-- End Footer aera -->
+
+    <div class="rbt-progress-parent">
+
+        <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
+
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+
+        </svg>
+
+    </div>
+
+
+
+    <!-- JS
+
+============================================ -->
+
+    <!-- Modernizer JS -->
+
+    <script src="assets/js/vendor/modernizr.min.js"></script>
+
+    <!-- jQuery JS -->
+
+    <script src="assets/js/vendor/jquery.js"></script>
+
+    <!-- Bootstrap JS -->
+
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+    <!-- sal.js -->
+
+    <script src="assets/js/vendor/sal.js"></script>
+
+    <script src="assets/js/vendor/swiper.js"></script>
+
+    <script src="assets/js/vendor/magnify.min.js"></script>
+
+    <script src="assets/js/vendor/jquery-appear.js"></script>
+
+    <script src="assets/js/vendor/odometer.js"></script>
+
+    <script src="assets/js/vendor/backtotop.js"></script>
+
+    <script src="assets/js/vendor/isotop.js"></script>
+
+    <script src="assets/js/vendor/imageloaded.js"></script>
+
+
+
+    <script src="assets/js/vendor/wow.js"></script>
+
+    <script src="assets/js/vendor/waypoint.min.js"></script>
+
+    <script src="assets/js/vendor/easypie.js"></script>
+
+    <script src="assets/js/vendor/text-type.js"></script>
+
+    <script src="assets/js/vendor/jquery-one-page-nav.js"></script>
+
+    <script src="assets/js/vendor/bootstrap-select.min.js"></script>
+
+    <script src="assets/js/vendor/jquery-ui.js"></script>
+
+    <script src="assets/js/vendor/magnify-popup.min.js"></script>
+
+    <script src="assets/js/vendor/paralax-scroll.js"></script>
+
+    <script src="assets/js/vendor/paralax.min.js"></script>
+
+    <script src="assets/js/vendor/countdown.js"></script>
+
+    <script src="assets/js/vendor/plyr.js"></script>
+
+    <!-- Main JS -->
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+
+
+</html>
+
+    

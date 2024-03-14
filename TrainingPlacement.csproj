@@ -1,0 +1,1250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{996BAE9C-534C-4DFB-9C60-65A675954629}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrainingPlacement</RootNamespace>
+    <AssemblyName>TrainingPlacement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44393</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.4.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\plugins\all.min.css" />
+    <Content Include="assets\css\plugins\animation.css" />
+    <Content Include="assets\css\plugins\bootstrap-select.min.css" />
+    <Content Include="assets\css\plugins\euclid-circulara.css" />
+    <Content Include="assets\css\plugins\feather.css" />
+    <Content Include="assets\css\plugins\fontawesome.min.css" />
+    <Content Include="assets\css\plugins\jquery-ui.css" />
+    <Content Include="assets\css\plugins\magnify.css" />
+    <Content Include="assets\css\plugins\magnigy-popup.min.css" />
+    <Content Include="assets\css\plugins\odometer.css" />
+    <Content Include="assets\css\plugins\plyr.css" />
+    <Content Include="assets\css\plugins\sal.css" />
+    <Content Include="assets\css\plugins\swiper.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\vendor\bootstrap.min.css" />
+    <Content Include="assets\css\vendor\slick-theme.css" />
+    <Content Include="assets\css\vendor\slick.css" />
+    <Content Include="assets\fonts\Feather.svg" />
+    <Content Include="assets\fonts\fontawesome-free\webfonts\fa-brands-400.svg" />
+    <Content Include="assets\fonts\fontawesome-free\webfonts\fa-regular-400.svg" />
+    <Content Include="assets\fonts\fontawesome-free\webfonts\fa-solid-900.svg" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\images\about\about-01.jpg" />
+    <Content Include="assets\images\about\about-01.png" />
+    <Content Include="assets\images\about\about-02.jpg" />
+    <Content Include="assets\images\about\about-02.png" />
+    <Content Include="assets\images\about\about-03.jpg" />
+    <Content Include="assets\images\about\about-03.png" />
+    <Content Include="assets\images\about\about-04.jpg" />
+    <Content Include="assets\images\about\about-05.jpg" />
+    <Content Include="assets\images\about\about-06.png" />
+    <Content Include="assets\images\about\about-07.jpg" />
+    <Content Include="assets\images\about\about-07.png" />
+    <Content Include="assets\images\about\about-08.jpg" />
+    <Content Include="assets\images\about\about-09.jpg" />
+    <Content Include="assets\images\about\about-10.jpg" />
+    <Content Include="assets\images\about\about-11.jpg" />
+    <Content Include="assets\images\about\about-12.jpg" />
+    <Content Include="assets\images\about\about-13.jpg" />
+    <Content Include="assets\images\about\about-14.jpg" />
+    <Content Include="assets\images\about\about-university.png" />
+    <Content Include="assets\images\about\admissionsp.png" />
+    <Content Include="assets\images\about\contact-2.jpg" />
+    <Content Include="assets\images\about\contact.jpg" />
+    <Content Include="assets\images\about\services.png" />
+    <Content Include="assets\images\banner\1-min.png" />
+    <Content Include="assets\images\banner\2-min.png" />
+    <Content Include="assets\images\banner\3-min.png" />
+    <Content Include="assets\images\banner\4-min.png" />
+    <Content Include="assets\images\banner\assetsimagesbannerbanner-8-min.png" />
+    <Content Include="assets\images\banner\banner-01-old.png" />
+    <Content Include="assets\images\banner\banner-01.png" />
+    <Content Include="assets\images\banner\banner-02.png" />
+    <Content Include="assets\images\banner\banner-1.jpg" />
+    <Content Include="assets\images\banner\banner-10.jpg" />
+    <Content Include="assets\images\banner\banner-2.jpg" />
+    <Content Include="assets\images\banner\banner-3.jpg" />
+    <Content Include="assets\images\banner\banner-4.jpg" />
+    <Content Include="assets\images\banner\banner-5.jpg" />
+    <Content Include="assets\images\banner\banner-6.jpg" />
+    <Content Include="assets\images\banner\banner-7.jpg" />
+    <Content Include="assets\images\banner\banner-8.jpg" />
+    <Content Include="assets\images\banner\banner-9.jpg" />
+    <Content Include="assets\images\banner\banner-group-image.png" />
+    <Content Include="assets\images\banner\banner-shape.png" />
+    <Content Include="assets\images\banner\banner-small-01.png" />
+    <Content Include="assets\images\banner\banner-small-02.png" />
+    <Content Include="assets\images\banner\banner-small-03.png" />
+    <Content Include="assets\images\banner\gallery-banner-01.jpg" />
+    <Content Include="assets\images\banner\gallery-banner-02.jpg" />
+    <Content Include="assets\images\banner\gallery-banner-03.jpg" />
+    <Content Include="assets\images\banner\histudy-text.png" />
+    <Content Include="assets\images\banner\HiStudy.png" />
+    <Content Include="assets\images\banner\hi_1.png" />
+    <Content Include="assets\images\banner\hi_2.png" />
+    <Content Include="assets\images\banner\hi_3.png" />
+    <Content Include="assets\images\banner\language-club.png" />
+    <Content Include="assets\images\banner\offer-badge-shape.svg" />
+    <Content Include="assets\images\banner\right-shape.png" />
+    <Content Include="assets\images\banner\teckture-bg-2.png" />
+    <Content Include="assets\images\banner\text-image.png" />
+    <Content Include="assets\images\banner\top-03.png" />
+    <Content Include="assets\images\banner\top-04.png" />
+    <Content Include="assets\images\banner\top-shape-02.png" />
+    <Content Include="assets\images\banner\top-shape.png" />
+    <Content Include="assets\images\banner\VC-Msg.jpg" />
+    <Content Include="assets\images\banner\wave.png" />
+    <Content Include="assets\images\banner\wave.svg" />
+    <Content Include="assets\images\banner\white-shape.svg" />
+    <Content Include="assets\images\bg\banner-bg-shape-1.png" />
+    <Content Include="assets\images\bg\banner-bg-shape-1.svg" />
+    <Content Include="assets\images\bg\bg-image-1.jpg" />
+    <Content Include="assets\images\bg\bg-image-10.jpg" />
+    <Content Include="assets\images\bg\bg-image-11.jpg" />
+    <Content Include="assets\images\bg\bg-image-12.jpg" />
+    <Content Include="assets\images\bg\bg-image-13.jpg" />
+    <Content Include="assets\images\bg\bg-image-14.jpg" />
+    <Content Include="assets\images\bg\bg-image-15.jpg" />
+    <Content Include="assets\images\bg\bg-image-16.jpg" />
+    <Content Include="assets\images\bg\bg-image-17.jpg" />
+    <Content Include="assets\images\bg\bg-image-18.jpg" />
+    <Content Include="assets\images\bg\bg-image-19.jpg" />
+    <Content Include="assets\images\bg\bg-image-2.jpg" />
+    <Content Include="assets\images\bg\bg-image-20.jpg" />
+    <Content Include="assets\images\bg\bg-image-21.jpg" />
+    <Content Include="assets\images\bg\bg-image-22.jpg" />
+    <Content Include="assets\images\bg\bg-image-23.jpg" />
+    <Content Include="assets\images\bg\bg-image-3.jpg" />
+    <Content Include="assets\images\bg\bg-image-4.jpg" />
+    <Content Include="assets\images\bg\bg-image-5.jpg" />
+    <Content Include="assets\images\bg\bg-image-6.jpg" />
+    <Content Include="assets\images\bg\bg-image-7 - Copy.jpg" />
+    <Content Include="assets\images\bg\bg-image-7.jpg" />
+    <Content Include="assets\images\bg\bg-image-8.jpg" />
+    <Content Include="assets\images\bg\bg-image-9.jpg" />
+    <Content Include="assets\images\bg\top-banner.png" />
+    <Content Include="assets\images\blog\author-14.png" />
+    <Content Include="assets\images\blog\author-b1.png" />
+    <Content Include="assets\images\blog\author-b2.png" />
+    <Content Include="assets\images\blog\author-b3.png" />
+    <Content Include="assets\images\blog\blog-bl-02.jpg" />
+    <Content Include="assets\images\blog\blog-card-01.jpg" />
+    <Content Include="assets\images\blog\blog-card-02.jpg" />
+    <Content Include="assets\images\blog\blog-card-03.jpg" />
+    <Content Include="assets\images\blog\blog-card-04.jpg" />
+    <Content Include="assets\images\blog\blog-card-05.jpg" />
+    <Content Include="assets\images\blog\blog-card-06.jpg" />
+    <Content Include="assets\images\blog\blog-card-07.jpg" />
+    <Content Include="assets\images\blog\blog-gallery-01.jpg" />
+    <Content Include="assets\images\blog\blog-gallery-02.jpg" />
+    <Content Include="assets\images\blog\blog-gallery-03.jpg" />
+    <Content Include="assets\images\blog\blog-grid-01.jpg" />
+    <Content Include="assets\images\blog\blog-grid-02.jpg" />
+    <Content Include="assets\images\blog\blog-grid-03.jpg" />
+    <Content Include="assets\images\blog\blog-grid-04.jpg" />
+    <Content Include="assets\images\blog\blog-grid-05.jpg" />
+    <Content Include="assets\images\blog\blog-grid-06.jpg" />
+    <Content Include="assets\images\blog\blog-md-01.jpeg" />
+    <Content Include="assets\images\blog\blog-meta-01.jpg" />
+    <Content Include="assets\images\blog\blog-single-01.png" />
+    <Content Include="assets\images\blog\blog-single-02.png" />
+    <Content Include="assets\images\blog\blog-single-03.png" />
+    <Content Include="assets\images\blog\blog-single-04.png" />
+    <Content Include="assets\images\blog\kindergarten-01.jpg" />
+    <Content Include="assets\images\blog\kindergarten-02.jpg" />
+    <Content Include="assets\images\blog\kindergarten-03.jpg" />
+    <Content Include="assets\images\blog\kindergarten-04.jpg" />
+    <Content Include="assets\images\blog\lms-01.jpg" />
+    <Content Include="assets\images\blog\lms-02.jpg" />
+    <Content Include="assets\images\blog\lms-03.jpg" />
+    <Content Include="assets\images\brand\brand-01.png" />
+    <Content Include="assets\images\brand\brand-02.png" />
+    <Content Include="assets\images\brand\brand-03.png" />
+    <Content Include="assets\images\brand\brand-04.png" />
+    <Content Include="assets\images\brand\brand-05.png" />
+    <Content Include="assets\images\brand\brand-06.png" />
+    <Content Include="assets\images\brand\brand-07.png" />
+    <Content Include="assets\images\brand\brand-08.png" />
+    <Content Include="assets\images\category\category-01.jpg" />
+    <Content Include="assets\images\category\design 6.48.07 PM.png" />
+    <Content Include="assets\images\category\design.png" />
+    <Content Include="assets\images\category\graphic-designer 6.48.07 PM.png" />
+    <Content Include="assets\images\category\graphic-designer.png" />
+    <Content Include="assets\images\category\image\arts.jpg" />
+    <Content Include="assets\images\category\image\finance.jpg" />
+    <Content Include="assets\images\category\image\graphic-design.jpg" />
+    <Content Include="assets\images\category\image\mobile.jpg" />
+    <Content Include="assets\images\category\image\personal-development.jpg" />
+    <Content Include="assets\images\category\image\sales.jpg" />
+    <Content Include="assets\images\category\image\software.jpg" />
+    <Content Include="assets\images\category\image\web-design.jpg" />
+    <Content Include="assets\images\category\infographic 6.48.07 PM.png" />
+    <Content Include="assets\images\category\infographic.png" />
+    <Content Include="assets\images\category\motivation 6.48.07 PM.png" />
+    <Content Include="assets\images\category\motivation.png" />
+    <Content Include="assets\images\category\paint-palette 6.48.07 PM.png" />
+    <Content Include="assets\images\category\paint-palette.png" />
+    <Content Include="assets\images\category\pantone 6.48.07 PM.png" />
+    <Content Include="assets\images\category\pantone.png" />
+    <Content Include="assets\images\category\personal.png" />
+    <Content Include="assets\images\category\server 6.48.07 PM.png" />
+    <Content Include="assets\images\category\server.png" />
+    <Content Include="assets\images\category\small-01.png" />
+    <Content Include="assets\images\category\smartphone 6.48.07 PM.png" />
+    <Content Include="assets\images\category\smartphone.png" />
+    <Content Include="assets\images\category\web-design 6.48.07 PM.png" />
+    <Content Include="assets\images\category\web-design.png" />
+    <Content Include="assets\images\client\avatar-02.png" />
+    <Content Include="assets\images\client\avatar-03.png" />
+    <Content Include="assets\images\client\avatar-04.png" />
+    <Content Include="assets\images\client\avatar-05.png" />
+    <Content Include="assets\images\client\avater-01.png" />
+    <Content Include="assets\images\client\client-1.png" />
+    <Content Include="assets\images\client\client-2.png" />
+    <Content Include="assets\images\client\client-3.png" />
+    <Content Include="assets\images\client\user.jpg" />
+    <Content Include="assets\images\course\category-1.png" />
+    <Content Include="assets\images\course\category-10.png" />
+    <Content Include="assets\images\course\category-2.png" />
+    <Content Include="assets\images\course\category-3.png" />
+    <Content Include="assets\images\course\category-4.png" />
+    <Content Include="assets\images\course\category-5.png" />
+    <Content Include="assets\images\course\category-6.png" />
+    <Content Include="assets\images\course\category-7.png" />
+    <Content Include="assets\images\course\category-8.png" />
+    <Content Include="assets\images\course\category-9.png" />
+    <Content Include="assets\images\course\classic-lms-01.jpg" />
+    <Content Include="assets\images\course\classic-lms-02.jpg" />
+    <Content Include="assets\images\course\classic-lms-03.jpg" />
+    <Content Include="assets\images\course\classic-lms-04.jpg" />
+    <Content Include="assets\images\course\classic-lms-05.jpg" />
+    <Content Include="assets\images\course\classic-lms-06.jpg" />
+    <Content Include="assets\images\course\course-01.jpg" />
+    <Content Include="assets\images\course\course-02.jpg" />
+    <Content Include="assets\images\course\course-03.jpg" />
+    <Content Include="assets\images\course\course-04.jpg" />
+    <Content Include="assets\images\course\course-05.jpg" />
+    <Content Include="assets\images\course\course-06.jpg" />
+    <Content Include="assets\images\course\course-category-01.jpg" />
+    <Content Include="assets\images\course\course-content.jpg" />
+    <Content Include="assets\images\course\course-elegant-01.jpg" />
+    <Content Include="assets\images\course\course-elegant-02.jpg" />
+    <Content Include="assets\images\course\course-elegant-03.jpg" />
+    <Content Include="assets\images\course\course-elegant-04.jpg" />
+    <Content Include="assets\images\course\course-elegant-05.jpg" />
+    <Content Include="assets\images\course\course-elegant-06.jpg" />
+    <Content Include="assets\images\course\course-feature-01.jpg" />
+    <Content Include="assets\images\course\course-feature-02.jpg" />
+    <Content Include="assets\images\course\course-feature-03.jpg" />
+    <Content Include="assets\images\course\course-list-01.jpg" />
+    <Content Include="assets\images\course\course-list-02.jpg" />
+    <Content Include="assets\images\course\course-list-03.jpg" />
+    <Content Include="assets\images\course\course-list-04.jpg" />
+    <Content Include="assets\images\course\course-list-05.jpg" />
+    <Content Include="assets\images\course\course-list-06.jpg" />
+    <Content Include="assets\images\course\course-online-01.jpg" />
+    <Content Include="assets\images\course\course-online-02.jpg" />
+    <Content Include="assets\images\course\course-online-03.jpg" />
+    <Content Include="assets\images\course\course-online-04.jpg" />
+    <Content Include="assets\images\course\course-online-05.jpg" />
+    <Content Include="assets\images\course\course-online-06.jpg" />
+    <Content Include="assets\images\course\course-single-01.jpg" />
+    <Content Include="assets\images\course\gym-01.jpg" />
+    <Content Include="assets\images\course\gym-02.jpg" />
+    <Content Include="assets\images\course\gym-03.jpg" />
+    <Content Include="assets\images\course\gym-04.jpg" />
+    <Content Include="assets\images\course\gym-05.jpg" />
+    <Content Include="assets\images\course\gym-06.jpg" />
+    <Content Include="assets\images\course\gym-program-01.jpg" />
+    <Content Include="assets\images\course\gym-program-02.jpg" />
+    <Content Include="assets\images\course\gym-program-03.jpg" />
+    <Content Include="assets\images\course\gym-program-04.jpg" />
+    <Content Include="assets\images\course\gym-program-05.jpg" />
+    <Content Include="assets\images\course\gym-program-06.jpg" />
+    <Content Include="assets\images\course\gym-program-07.jpg" />
+    <Content Include="assets\images\course\gym-program-08.jpg" />
+    <Content Include="assets\images\course\kindergarten-course-01.jpg" />
+    <Content Include="assets\images\course\kindergarten-course-02.jpg" />
+    <Content Include="assets\images\course\kindergarten-course-03.jpg" />
+    <Content Include="assets\images\course\language-academy-01.jpg" />
+    <Content Include="assets\images\course\language-academy-02.jpg" />
+    <Content Include="assets\images\course\language-academy-03.jpg" />
+    <Content Include="assets\images\course\language-academy-04.jpg" />
+    <Content Include="assets\images\course\language-academy-05.jpg" />
+    <Content Include="assets\images\course\language-academy-06.jpg" />
+    <Content Include="assets\images\course\single-course-02.jpg" />
+    <Content Include="assets\images\course\single-course-04.jpg" />
+    <Content Include="assets\images\course\single-course-05.jpg" />
+    <Content Include="assets\images\course\single-course-06.jpg" />
+    <Content Include="assets\images\course\single-course-07.jpg" />
+    <Content Include="assets\images\course\single-course-08.jpg" />
+    <Content Include="assets\images\course\single-course-09.jpg" />
+    <Content Include="assets\images\event\Event-2.png" />
+    <Content Include="assets\images\event\Event1.png" />
+    <Content Include="assets\images\event\Event3.png" />
+    <Content Include="assets\images\event\Event4.png" />
+    <Content Include="assets\images\event\grid-type-01.jpg" />
+    <Content Include="assets\images\event\grid-type-02.jpg" />
+    <Content Include="assets\images\event\grid-type-03.jpg" />
+    <Content Include="assets\images\event\grid-type-04.jpg" />
+    <Content Include="assets\images\event\grid-type-05.jpg" />
+    <Content Include="assets\images\event\grid-type-06.jpg" />
+    <Content Include="assets\images\event\gym-01.jpg" />
+    <Content Include="assets\images\event\gym-02.jpg" />
+    <Content Include="assets\images\event\gym-03.jpg" />
+    <Content Include="assets\images\event\gym-04.jpg" />
+    <Content Include="assets\images\favicon.png" />
+    <Content Include="assets\images\flip\kindergarten-01-back.jpg" />
+    <Content Include="assets\images\flip\kindergarten-01-front.jpg" />
+    <Content Include="assets\images\flip\kindergarten-02-back.jpg" />
+    <Content Include="assets\images\flip\kindergarten-02-front.jpg" />
+    <Content Include="assets\images\flip\kindergarten-03-back.jpg" />
+    <Content Include="assets\images\flip\kindergarten-03-front.jpg" />
+    <Content Include="assets\images\flip\kindergarten-04-back.jpg" />
+    <Content Include="assets\images\flip\kindergarten-04-front.jpg" />
+    <Content Include="assets\images\gallery\100.jpg" />
+    <Content Include="assets\images\gallery\101.jpg" />
+    <Content Include="assets\images\gallery\105.jpeg" />
+    <Content Include="assets\images\gallery\113.jpg" />
+    <Content Include="assets\images\gallery\114.jpg" />
+    <Content Include="assets\images\gallery\117.jpg" />
+    <Content Include="assets\images\gallery\4.jpeg" />
+    <Content Include="assets\images\gallery\5.jpeg" />
+    <Content Include="assets\images\gallery\Adisoft.jpeg" />
+    <Content Include="assets\images\gallery\Ashwin.png" />
+    <Content Include="assets\images\gallery\Autoignition.jpeg" />
+    <Content Include="assets\images\gallery\gallery-01.jpg" />
+    <Content Include="assets\images\gallery\gallery-02.jpg" />
+    <Content Include="assets\images\gallery\gallery-03.jpg" />
+    <Content Include="assets\images\gallery\gallery-04.jpg" />
+    <Content Include="assets\images\gallery\gallery-05.jpg" />
+    <Content Include="assets\images\gallery\gallery-1.jpg" />
+    <Content Include="assets\images\gallery\gallery-2.jpg" />
+    <Content Include="assets\images\gallery\gallery-3.jpeg" />
+    <Content Include="assets\images\gallery\gallery-4.jpg" />
+    <Content Include="assets\images\gallery\gallery-5.jpg" />
+    <Content Include="assets\images\gallery\gallery-6.jpg" />
+    <Content Include="assets\images\gallery\gallery-big.jpg" />
+    <Content Include="assets\images\gallery\gallery-thumb-01.jpg" />
+    <Content Include="assets\images\gallery\gallery-thumb-02.jpg" />
+    <Content Include="assets\images\gallery\gallery-thumb-03.jpg" />
+    <Content Include="assets\images\gallery\gallery-thumb-04.jpg" />
+    <Content Include="assets\images\gallery\gallery-thumb-05.jpg" />
+    <Content Include="assets\images\gallery\gallery-thumb-06.jpg" />
+    <Content Include="assets\images\gallery\gallery-thumb-07.jpg" />
+    <Content Include="assets\images\gallery\gallery-thumb-08.jpg" />
+    <Content Include="assets\images\gallery\gallery-thumb-09.jpg" />
+    <Content Include="assets\images\gallery\gallery-thumb-10.jpg" />
+    <Content Include="assets\images\gallery\gallery-thumb-11.jpg" />
+    <Content Include="assets\images\gallery\gallery-thumb-12.jpg" />
+    <Content Include="assets\images\gallery\Geetanjali Home Poster.jpeg" />
+    <Content Include="assets\images\gallery\Hike Poster.jpg" />
+    <Content Include="assets\images\gallery\kindergarten-thumb-01.jpg" />
+    <Content Include="assets\images\gallery\kindergarten-thumb-02.jpg" />
+    <Content Include="assets\images\gallery\kindergarten-thumb-03.jpg" />
+    <Content Include="assets\images\gallery\kindergarten-thumb-04.jpg" />
+    <Content Include="assets\images\gallery\kindergarten-thumb-05.jpg" />
+    <Content Include="assets\images\gallery\kindergarten-thumb-06.jpg" />
+    <Content Include="assets\images\gallery\kindergarten-thumb-07.jpg" />
+    <Content Include="assets\images\gallery\kindergarten-thumb-08.jpg" />
+    <Content Include="assets\images\gallery\kindergarten-thumb-09.jpg" />
+    <Content Include="assets\images\gallery\kindergarten-thumb-10.jpg" />
+    <Content Include="assets\images\gallery\kindergarten-thumb-11.jpg" />
+    <Content Include="assets\images\gallery\kindergarten-thumb-12.jpg" />
+    <Content Include="assets\images\gallery\kindergarten-thumb-13.jpg" />
+    <Content Include="assets\images\gallery\mediacov-1.jpg" />
+    <Content Include="assets\images\gallery\mediacov-2.jpeg" />
+    <Content Include="assets\images\gallery\mediacov-3.jpg" />
+    <Content Include="assets\images\gallery\mediacov-4.jpg" />
+    <Content Include="assets\images\gallery\mediacov-5.jpg" />
+    <Content Include="assets\images\gallery\mediacov-6.jpg" />
+    <Content Include="assets\images\gallery\Paracoat Poster.jpg" />
+    <Content Include="assets\images\gallery\Pie Infocom Poster.jpg" />
+    <Content Include="assets\images\gallery\placement1.png" />
+    <Content Include="assets\images\gallery\placement2.png" />
+    <Content Include="assets\images\gallery\Torque Robotics.jpg" />
+    <Content Include="assets\images\icons\001-bulb.png" />
+    <Content Include="assets\images\icons\002-hat.png" />
+    <Content Include="assets\images\icons\003-id-card.png" />
+    <Content Include="assets\images\icons\004-pass.png" />
+    <Content Include="assets\images\icons\005-diamond.png" />
+    <Content Include="assets\images\icons\arrow-down.png" />
+    <Content Include="assets\images\icons\arrow-right.svg" />
+    <Content Include="assets\images\icons\arrow.png" />
+    <Content Include="assets\images\icons\badge-bg-shape.svg" />
+    <Content Include="assets\images\icons\best-seller-icon.png" />
+    <Content Include="assets\images\icons\bing.png" />
+    <Content Include="assets\images\icons\card-icon-1.png" />
+    <Content Include="assets\images\icons\card-icon-10.png" />
+    <Content Include="assets\images\icons\card-icon-11.png" />
+    <Content Include="assets\images\icons\card-icon-12.png" />
+    <Content Include="assets\images\icons\card-icon-2.png" />
+    <Content Include="assets\images\icons\card-icon-3.png" />
+    <Content Include="assets\images\icons\card-icon-4.png" />
+    <Content Include="assets\images\icons\card-icon-5.png" />
+    <Content Include="assets\images\icons\card-icon-6.png" />
+    <Content Include="assets\images\icons\card-icon-7.png" />
+    <Content Include="assets\images\icons\card-icon-8.png" />
+    <Content Include="assets\images\icons\card-icon-9.png" />
+    <Content Include="assets\images\icons\certificate-none-portrait.svg" />
+    <Content Include="assets\images\icons\certificate-none.svg" />
+    <Content Include="assets\images\icons\counter-01.png" />
+    <Content Include="assets\images\icons\counter-02.png" />
+    <Content Include="assets\images\icons\counter-03.png" />
+    <Content Include="assets\images\icons\counter-04.png" />
+    <Content Include="assets\images\icons\dashboard.svg" />
+    <Content Include="assets\images\icons\de.png" />
+    <Content Include="assets\images\icons\documentation.png" />
+    <Content Include="assets\images\icons\elite.png" />
+    <Content Include="assets\images\icons\elite.svg" />
+    <Content Include="assets\images\icons\en-us.png" />
+    <Content Include="assets\images\icons\facebook.png" />
+    <Content Include="assets\images\icons\fr.png" />
+    <Content Include="assets\images\icons\gif-01.gif" />
+    <Content Include="assets\images\icons\google-white.png" />
+    <Content Include="assets\images\icons\google.png" />
+    <Content Include="assets\images\icons\hand-emojji.svg" />
+    <Content Include="assets\images\icons\hire.png" />
+    <Content Include="assets\images\icons\hubs.png" />
+    <Content Include="assets\images\icons\icon-cat-01.png" />
+    <Content Include="assets\images\icons\icons-01.png" />
+    <Content Include="assets\images\icons\icons-02.png" />
+    <Content Include="assets\images\icons\icons-03.png" />
+    <Content Include="assets\images\icons\icons-04.png" />
+    <Content Include="assets\images\icons\line-shape.png" />
+    <Content Include="assets\images\icons\logout.svg" />
+    <Content Include="assets\images\icons\offer-badge-bg-color.svg" />
+    <Content Include="assets\images\icons\offer-badge-bg-image.svg" />
+    <Content Include="assets\images\icons\offer-badge-bg.svg" />
+    <Content Include="assets\images\icons\power.png" />
+    <Content Include="assets\images\icons\pricing-icon-01.png" />
+    <Content Include="assets\images\icons\pricing-icon-02.png" />
+    <Content Include="assets\images\icons\pricing-icon-03.png" />
+    <Content Include="assets\images\icons\quote.svg" />
+    <Content Include="assets\images\icons\rating-2.png" />
+    <Content Include="assets\images\icons\runner.png" />
+    <Content Include="assets\images\icons\settings.svg" />
+    <Content Include="assets\images\icons\shape-bg.png" />
+    <Content Include="assets\images\icons\support.png" />
+    <Content Include="assets\images\icons\three-shape.png" />
+    <Content Include="assets\images\icons\tree-shape.svg" />
+    <Content Include="assets\images\icons\trophy.png" />
+    <Content Include="assets\images\icons\twitter.png" />
+    <Content Include="assets\images\icons\yelp.png" />
+    <Content Include="assets\images\icons\yes.png" />
+    <Content Include="assets\images\icons\youtube.png" />
+    <Content Include="assets\images\instagram\instagram-01.jpg" />
+    <Content Include="assets\images\instagram\instagram-02.jpg" />
+    <Content Include="assets\images\instagram\instagram-03.jpg" />
+    <Content Include="assets\images\instagram\instagram-04.jpg" />
+    <Content Include="assets\images\instagram\instagram-05.jpg" />
+    <Content Include="assets\images\instagram\instagram-06.jpg" />
+    <Content Include="assets\images\logo\logo copy.png" />
+    <Content Include="assets\images\logo\logo-2x%402x.png" />
+    <Content Include="assets\images\logo\logo.png" />
+    <Content Include="assets\images\logo\svsu_logo.png" />
+    <Content Include="assets\images\others\header.png" />
+    <Content Include="assets\images\others\kids-video-01.jpg" />
+    <Content Include="assets\images\others\preview-01.png" />
+    <Content Include="assets\images\others\preview-02.png" />
+    <Content Include="assets\images\others\preview-03.png" />
+    <Content Include="assets\images\others\preview-04.png" />
+    <Content Include="assets\images\others\preview-05.png" />
+    <Content Include="assets\images\others\preview-06.png" />
+    <Content Include="assets\images\others\preview-port-01.png" />
+    <Content Include="assets\images\others\preview-port-02.png" />
+    <Content Include="assets\images\others\preview-port-03.png" />
+    <Content Include="assets\images\others\preview-port-04.png" />
+    <Content Include="assets\images\others\preview-port-05.png" />
+    <Content Include="assets\images\others\preview-port-06.png" />
+    <Content Include="assets\images\others\thumbnail-placeholder.svg" />
+    <Content Include="assets\images\others\video-01.jpg" />
+    <Content Include="assets\images\others\video-02.jpg" />
+    <Content Include="assets\images\others\video-03.jpg" />
+    <Content Include="assets\images\others\video-04.jpg" />
+    <Content Include="assets\images\others\video-05.jpg" />
+    <Content Include="assets\images\others\video-06.jpg" />
+    <Content Include="assets\images\others\video-07.jpg" />
+    <Content Include="assets\images\others\video-08.jpg" />
+    <Content Include="assets\images\product\1.jpg" />
+    <Content Include="assets\images\product\2.jpg" />
+    <Content Include="assets\images\product\3.jpg" />
+    <Content Include="assets\images\product\4.jpg" />
+    <Content Include="assets\images\product\5.jpg" />
+    <Content Include="assets\images\product\6.jpg" />
+    <Content Include="assets\images\product\7.jpg" />
+    <Content Include="assets\images\product\8.jpg" />
+    <Content Include="assets\images\service\cat-01.jpg" />
+    <Content Include="assets\images\service\mobile-cat.jpg" />
+    <Content Include="assets\images\service\service-01.png" />
+    <Content Include="assets\images\service\service-02.png" />
+    <Content Include="assets\images\service\service-03.png" />
+    <Content Include="assets\images\service\service-04.png" />
+    <Content Include="assets\images\service\service-05.png" />
+    <Content Include="assets\images\service\service-06.png" />
+    <Content Include="assets\images\shape\airdrop.png" />
+    <Content Include="assets\images\shape\backpack.png" />
+    <Content Include="assets\images\shape\ball.png" />
+    <Content Include="assets\images\shape\bg-image-2.svg" />
+    <Content Include="assets\images\shape\creativity-2.png" />
+    <Content Include="assets\images\shape\creativity.png" />
+    <Content Include="assets\images\shape\cta-2.png" />
+    <Content Include="assets\images\shape\cta-3.png" />
+    <Content Include="assets\images\shape\cta-4.png" />
+    <Content Include="assets\images\shape\cta-icon.png" />
+    <Content Include="assets\images\shape\cta-text.png" />
+    <Content Include="assets\images\shape\cta.png" />
+    <Content Include="assets\images\shape\dots-white.svg" />
+    <Content Include="assets\images\shape\dots.png" />
+    <Content Include="assets\images\shape\dots.svg" />
+    <Content Include="assets\images\shape\france.svg" />
+    <Content Include="assets\images\shape\germany.svg" />
+    <Content Include="assets\images\shape\icon-01.png" />
+    <Content Include="assets\images\shape\icon-02.png" />
+    <Content Include="assets\images\shape\icon-03.png" />
+    <Content Include="assets\images\shape\icon-04.png" />
+    <Content Include="assets\images\shape\icon-05.png" />
+    <Content Include="assets\images\shape\icon-06.png" />
+    <Content Include="assets\images\shape\icon-07.png" />
+    <Content Include="assets\images\shape\icon-08.png" />
+    <Content Include="assets\images\shape\idea.png" />
+    <Content Include="assets\images\shape\italy.svg" />
+    <Content Include="assets\images\shape\japan.svg" />
+    <Content Include="assets\images\shape\notes.png" />
+    <Content Include="assets\images\shape\quote.svg" />
+    <Content Include="assets\images\shape\school.png" />
+    <Content Include="assets\images\shape\service-01.png" />
+    <Content Include="assets\images\shape\service-02.png" />
+    <Content Include="assets\images\shape\service-03.png" />
+    <Content Include="assets\images\shape\service-04.png" />
+    <Content Include="assets\images\shape\service-05.png" />
+    <Content Include="assets\images\shape\shape-01.png" />
+    <Content Include="assets\images\shape\shape-02.png" />
+    <Content Include="assets\images\shape\signature.png" />
+    <Content Include="assets\images\shape\south-korea.svg" />
+    <Content Include="assets\images\shape\studying.png" />
+    <Content Include="assets\images\shape\united-kingdom.svg" />
+    <Content Include="assets\images\shape\workout.png" />
+    <Content Include="assets\images\splash\banner-group-image.png" />
+    <Content Include="assets\images\splash\bg\bg-1.png" />
+    <Content Include="assets\images\splash\bg\bg-1.svg" />
+    <Content Include="assets\images\splash\bg\bg-2.png" />
+    <Content Include="assets\images\splash\bg\gradient-1.jpg" />
+    <Content Include="assets\images\splash\bg\gradient-2.jpg" />
+    <Content Include="assets\images\splash\bg\gradient-3.jpg" />
+    <Content Include="assets\images\splash\bg\left-right-line-1.svg" />
+    <Content Include="assets\images\splash\bg\left-right-line-small.svg" />
+    <Content Include="assets\images\splash\bg\left-right-line.svg" />
+    <Content Include="assets\images\splash\bg\right-left-line.svg" />
+    <Content Include="assets\images\splash\code.png" />
+    <Content Include="assets\images\splash\coming-soon-01.png" />
+    <Content Include="assets\images\splash\coming-soon-02.png" />
+    <Content Include="assets\images\splash\coming-soon-03.png" />
+    <Content Include="assets\images\splash\courses-layout.png" />
+    <Content Include="assets\images\splash\cta-01.png" />
+    <Content Include="assets\images\splash\demo-1.png" />
+    <Content Include="assets\images\splash\demo-10.png" />
+    <Content Include="assets\images\splash\demo-11.png" />
+    <Content Include="assets\images\splash\demo-12.png" />
+    <Content Include="assets\images\splash\demo-13.png" />
+    <Content Include="assets\images\splash\demo-14.png" />
+    <Content Include="assets\images\splash\demo-15.png" />
+    <Content Include="assets\images\splash\demo-2.png" />
+    <Content Include="assets\images\splash\demo-3.png" />
+    <Content Include="assets\images\splash\demo-4.png" />
+    <Content Include="assets\images\splash\demo-5.png" />
+    <Content Include="assets\images\splash\demo-6.png" />
+    <Content Include="assets\images\splash\demo-7.png" />
+    <Content Include="assets\images\splash\demo-8.png" />
+    <Content Include="assets\images\splash\demo-9.png" />
+    <Content Include="assets\images\splash\demo-mobile-1.png" />
+    <Content Include="assets\images\splash\demo-mobile-10.png" />
+    <Content Include="assets\images\splash\demo-mobile-11.png" />
+    <Content Include="assets\images\splash\demo-mobile-12.png" />
+    <Content Include="assets\images\splash\demo-mobile-13.png" />
+    <Content Include="assets\images\splash\demo-mobile-14.png" />
+    <Content Include="assets\images\splash\demo-mobile-15.png" />
+    <Content Include="assets\images\splash\demo-mobile-2.png" />
+    <Content Include="assets\images\splash\demo-mobile-3.png" />
+    <Content Include="assets\images\splash\demo-mobile-4.png" />
+    <Content Include="assets\images\splash\demo-mobile-5.png" />
+    <Content Include="assets\images\splash\demo-mobile-6.png" />
+    <Content Include="assets\images\splash\demo-mobile-7.png" />
+    <Content Include="assets\images\splash\demo-mobile-8.png" />
+    <Content Include="assets\images\splash\demo-mobile-9.png" />
+    <Content Include="assets\images\splash\demo\coming-soon-1.png" />
+    <Content Include="assets\images\splash\demo\coming-soon-2.png" />
+    <Content Include="assets\images\splash\demo\coming-soon-3.png" />
+    <Content Include="assets\images\splash\demo\h1.jpg" />
+    <Content Include="assets\images\splash\demo\h10.jpg" />
+    <Content Include="assets\images\splash\demo\h11.jpg" />
+    <Content Include="assets\images\splash\demo\h12.jpg" />
+    <Content Include="assets\images\splash\demo\h13.jpg" />
+    <Content Include="assets\images\splash\demo\h14.jpg" />
+    <Content Include="assets\images\splash\demo\h15.jpg" />
+    <Content Include="assets\images\splash\demo\h2.jpg" />
+    <Content Include="assets\images\splash\demo\h3.jpg" />
+    <Content Include="assets\images\splash\demo\h4.jpg" />
+    <Content Include="assets\images\splash\demo\h5.jpg" />
+    <Content Include="assets\images\splash\demo\h6.jpg" />
+    <Content Include="assets\images\splash\demo\h7.jpg" />
+    <Content Include="assets\images\splash\demo\h8.jpg" />
+    <Content Include="assets\images\splash\demo\h9.jpg" />
+    <Content Include="assets\images\splash\elements.png" />
+    <Content Include="assets\images\splash\feature\feature-01.jpg" />
+    <Content Include="assets\images\splash\feature\feature-01.png" />
+    <Content Include="assets\images\splash\feature\feature-03.png" />
+    <Content Include="assets\images\splash\feature\feature-04.png" />
+    <Content Include="assets\images\splash\feature\feature-05.png" />
+    <Content Include="assets\images\splash\feature\feature-06.png" />
+    <Content Include="assets\images\splash\feature\feature-07.png" />
+    <Content Include="assets\images\splash\feature\feature-08.png" />
+    <Content Include="assets\images\splash\feature\feature-09.png" />
+    <Content Include="assets\images\splash\header-layout-old.png" />
+    <Content Include="assets\images\splash\header-layout.png" />
+    <Content Include="assets\images\splash\icons\benefit-01.png" />
+    <Content Include="assets\images\splash\icons\benefit-02.png" />
+    <Content Include="assets\images\splash\icons\benefit-03.png" />
+    <Content Include="assets\images\splash\icons\benefit-04.png" />
+    <Content Include="assets\images\splash\icons\benefit-05.png" />
+    <Content Include="assets\images\splash\icons\course-format.png" />
+    <Content Include="assets\images\splash\icons\curve.png" />
+    <Content Include="assets\images\splash\icons\envato-logo-icon.png" />
+    <Content Include="assets\images\splash\icons\envato.png" />
+    <Content Include="assets\images\splash\icons\group-image.png" />
+    <Content Include="assets\images\splash\icons\header.png" />
+    <Content Include="assets\images\splash\icons\line-shape.png" />
+    <Content Include="assets\images\splash\icons\map.png" />
+    <Content Include="assets\images\splash\icons\online-course.png" />
+    <Content Include="assets\images\splash\icons\post-format.png" />
+    <Content Include="assets\images\splash\icons\rating.png" />
+    <Content Include="assets\images\splash\icons\shape-1.png" />
+    <Content Include="assets\images\splash\icons\shape-2.png" />
+    <Content Include="assets\images\splash\icons\shape-3.png" />
+    <Content Include="assets\images\splash\icons\shape-4.png" />
+    <Content Include="assets\images\splash\icons\shape-5.png" />
+    <Content Include="assets\images\splash\icons\shape-6.png" />
+    <Content Include="assets\images\splash\icons\shape-7.png" />
+    <Content Include="assets\images\splash\icons\sun-shadow-right-2.png" />
+    <Content Include="assets\images\splash\icons\sun-shadow-right-3.png" />
+    <Content Include="assets\images\splash\icons\sun-shadow-right.png" />
+    <Content Include="assets\images\splash\icons\web-programming.png" />
+    <Content Include="assets\images\splash\innerlayout\blog-layout-01.png" />
+    <Content Include="assets\images\splash\innerlayout\blog-layout-02.png" />
+    <Content Include="assets\images\splash\innerlayout\blog-layout-03.png" />
+    <Content Include="assets\images\splash\innerlayout\blog-layout-04.png" />
+    <Content Include="assets\images\splash\innerlayout\blog-layout-05.png" />
+    <Content Include="assets\images\splash\innerlayout\blog-layout-06.png" />
+    <Content Include="assets\images\splash\innerlayout\blog-layout-07.png" />
+    <Content Include="assets\images\splash\innerlayout\blog-layout-08.png" />
+    <Content Include="assets\images\splash\innerlayout\blog-layout-09.png" />
+    <Content Include="assets\images\splash\innerlayout\course-layout-01.png" />
+    <Content Include="assets\images\splash\innerlayout\course-layout-02.png" />
+    <Content Include="assets\images\splash\innerlayout\course-layout-03.png" />
+    <Content Include="assets\images\splash\innerlayout\course-layout-04.png" />
+    <Content Include="assets\images\splash\innerlayout\course-layout-05.png" />
+    <Content Include="assets\images\splash\innerlayout\course-layout-06.png" />
+    <Content Include="assets\images\splash\innerlayout\course-layout-07.png" />
+    <Content Include="assets\images\splash\innerlayout\course-layout-08.png" />
+    <Content Include="assets\images\splash\innerlayout\course-layout-09.png" />
+    <Content Include="assets\images\splash\innerlayout\course-layout-10.png" />
+    <Content Include="assets\images\splash\innerlayout\course-layout-11.png" />
+    <Content Include="assets\images\splash\innerlayout\event-layout-01.png" />
+    <Content Include="assets\images\splash\innerlayout\event-layout-02.png" />
+    <Content Include="assets\images\splash\innerlayout\event-layout-03.png" />
+    <Content Include="assets\images\splash\innerlayout\event-layout-04.png" />
+    <Content Include="assets\images\splash\innerlayout\shop-layout-01.png" />
+    <Content Include="assets\images\splash\innerlayout\shop-layout-02.png" />
+    <Content Include="assets\images\splash\innerlayout\shop-layout-03.png" />
+    <Content Include="assets\images\splash\innerlayout\shop-layout-04.png" />
+    <Content Include="assets\images\splash\innerlayout\shop-layout-05.png" />
+    <Content Include="assets\images\splash\innerlayout\shop-layout-06.png" />
+    <Content Include="assets\images\splash\plugin\animation.png" />
+    <Content Include="assets\images\splash\plugin\bootstrap.png" />
+    <Content Include="assets\images\splash\plugin\contact.png" />
+    <Content Include="assets\images\splash\plugin\font.png" />
+    <Content Include="assets\images\splash\plugin\instagram.png" />
+    <Content Include="assets\images\splash\plugin\isotop.png" />
+    <Content Include="assets\images\splash\plugin\mainchimp.png" />
+    <Content Include="assets\images\splash\plugin\popup.png" />
+    <Content Include="assets\images\splash\plugin\ratina.png" />
+    <Content Include="assets\images\splash\plugin\seo.png" />
+    <Content Include="assets\images\splash\plugin\slider.png" />
+    <Content Include="assets\images\splash\plugin\support.png" />
+    <Content Include="assets\images\splash\plugin\validation.png" />
+    <Content Include="assets\images\splash\topfeature\01.png" />
+    <Content Include="assets\images\splash\topfeature\02.png" />
+    <Content Include="assets\images\splash\topfeature\03.png" />
+    <Content Include="assets\images\split\split-01.jpg" />
+    <Content Include="assets\images\split\split-02.jpg" />
+    <Content Include="assets\images\tab\Image 10.jpg" />
+    <Content Include="assets\images\tab\tab-alumni.png" />
+    <Content Include="assets\images\tab\tabs-01.jpg" />
+    <Content Include="assets\images\tab\tabs-02.jpg" />
+    <Content Include="assets\images\tab\tabs-03.jpg" />
+    <Content Include="assets\images\tab\tabs-04.jpg" />
+    <Content Include="assets\images\tab\tabs-05.jpg" />
+    <Content Include="assets\images\tab\tabs-06.jpg" />
+    <Content Include="assets\images\tab\tabs-07.jpg" />
+    <Content Include="assets\images\tab\tabs-08.jpg" />
+    <Content Include="assets\images\tab\tabs-09.jpg" />
+    <Content Include="assets\images\tab\tabs-10.jpg" />
+    <Content Include="assets\images\team\avatar-2.jpg" />
+    <Content Include="assets\images\team\avatar.jpg" />
+    <Content Include="assets\images\team\dtpo-min.png" />
+    <Content Include="assets\images\team\team-01.jpg" />
+    <Content Include="assets\images\team\team-02.jpg" />
+    <Content Include="assets\images\team\team-03.jpg" />
+    <Content Include="assets\images\team\team-04.jpg" />
+    <Content Include="assets\images\team\team-05.jpg" />
+    <Content Include="assets\images\team\team-06.jpg" />
+    <Content Include="assets\images\team\team-07.jpg" />
+    <Content Include="assets\images\team\team-08.jpg" />
+    <Content Include="assets\images\team\team-09.jpg" />
+    <Content Include="assets\images\team\team-10.jpg" />
+    <Content Include="assets\images\testimonial\Ajad.png" />
+    <Content Include="assets\images\testimonial\Ankur-Agarwal.png" />
+    <Content Include="assets\images\testimonial\Bhagyashrey.png" />
+    <Content Include="assets\images\testimonial\client-01.png" />
+    <Content Include="assets\images\testimonial\client-02.png" />
+    <Content Include="assets\images\testimonial\client-03.png" />
+    <Content Include="assets\images\testimonial\client-04.png" />
+    <Content Include="assets\images\testimonial\client-05.png" />
+    <Content Include="assets\images\testimonial\client-06.png" />
+    <Content Include="assets\images\testimonial\client-07.png" />
+    <Content Include="assets\images\testimonial\client-08.png" />
+    <Content Include="assets\images\testimonial\client-09.png" />
+    <Content Include="assets\images\testimonial\client-10.png" />
+    <Content Include="assets\images\testimonial\client-11.png" />
+    <Content Include="assets\images\testimonial\client-12.png" />
+    <Content Include="assets\images\testimonial\image-1.png" />
+    <Content Include="assets\images\testimonial\Ladli-Sharma.png" />
+    <Content Include="assets\images\testimonial\Manjeet.png" />
+    <Content Include="assets\images\testimonial\Mr-Sunil.png" />
+    <Content Include="assets\images\testimonial\Mr.Gurmeet.png" />
+    <Content Include="assets\images\testimonial\Mr.Vishal.png" />
+    <Content Include="assets\images\testimonial\testimonial-1.jpg" />
+    <Content Include="assets\images\testimonial\testimonial-2.jpg" />
+    <Content Include="assets\images\testimonial\testimonial-3.jpg" />
+    <Content Include="assets\images\testimonial\testimonial-4.jpg" />
+    <Content Include="assets\images\testimonial\testimonial-5.jpg" />
+    <Content Include="assets\images\testimonial\testimonial-6.jpg" />
+    <Content Include="assets\images\testimonial\testimonial-7.jpg" />
+    <Content Include="assets\images\testimonial\testimonial-8.jpg" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\vendor\backtotop.js" />
+    <Content Include="assets\js\vendor\bootstrap-select.min.js" />
+    <Content Include="assets\js\vendor\bootstrap.min.js" />
+    <Content Include="assets\js\vendor\countdown.js" />
+    <Content Include="assets\js\vendor\easypie.js" />
+    <Content Include="assets\js\vendor\imageloaded.js" />
+    <Content Include="assets\js\vendor\isotop.js" />
+    <Content Include="assets\js\vendor\jquery-appear.js" />
+    <Content Include="assets\js\vendor\jquery-one-page-nav.js" />
+    <Content Include="assets\js\vendor\jquery-ui.js" />
+    <Content Include="assets\js\vendor\jquery.js" />
+    <Content Include="assets\js\vendor\magnify-popup.min.js" />
+    <Content Include="assets\js\vendor\magnify.min.js" />
+    <Content Include="assets\js\vendor\modernizr.min.js" />
+    <Content Include="assets\js\vendor\odometer.js" />
+    <Content Include="assets\js\vendor\paralax-scroll.js" />
+    <Content Include="assets\js\vendor\paralax.js" />
+    <Content Include="assets\js\vendor\paralax.min.js" />
+    <Content Include="assets\js\vendor\plyr.js" />
+    <Content Include="assets\js\vendor\sal.js" />
+    <Content Include="assets\js\vendor\slick.min.js" />
+    <Content Include="assets\js\vendor\swiper.js" />
+    <Content Include="assets\js\vendor\text-type.js" />
+    <Content Include="assets\js\vendor\waypoint.min.js" />
+    <Content Include="assets\js\vendor\wow.js" />
+    <Content Include="assets\scss\elements\_progressbar.html" />
+    <Content Include="call-pic.png" />
+    <Content Include="careercounseling.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="assets\fonts\EuclidCircularA-Bold.woff" />
+    <Content Include="assets\fonts\EuclidCircularA-Bold.woff2" />
+    <Content Include="assets\fonts\EuclidCircularA-BoldItalic.woff" />
+    <Content Include="assets\fonts\EuclidCircularA-BoldItalic.woff2" />
+    <Content Include="assets\fonts\EuclidCircularA-Italic.woff" />
+    <Content Include="assets\fonts\EuclidCircularA-Italic.woff2" />
+    <Content Include="assets\fonts\EuclidCircularA-Light.woff" />
+    <Content Include="assets\fonts\EuclidCircularA-Light.woff2" />
+    <Content Include="assets\fonts\EuclidCircularA-LightItalic.woff" />
+    <Content Include="assets\fonts\EuclidCircularA-LightItalic.woff2" />
+    <Content Include="assets\fonts\EuclidCircularA-Medium.woff" />
+    <Content Include="assets\fonts\EuclidCircularA-Medium.woff2" />
+    <Content Include="assets\fonts\EuclidCircularA-MediumItalic.woff" />
+    <Content Include="assets\fonts\EuclidCircularA-MediumItalic.woff2" />
+    <Content Include="assets\fonts\EuclidCircularA-Regular.woff" />
+    <Content Include="assets\fonts\EuclidCircularA-Regular.woff2" />
+    <Content Include="assets\fonts\EuclidCircularA-SemiBold.woff" />
+    <Content Include="assets\fonts\EuclidCircularA-SemiBold.woff2" />
+    <Content Include="assets\fonts\EuclidCircularA-SemiBoldItalic.woff" />
+    <Content Include="assets\fonts\EuclidCircularA-SemiBoldItalic.woff2" />
+    <Content Include="assets\fonts\Feather.ttf" />
+    <Content Include="assets\fonts\Feather.woff" />
+    <Content Include="assets\fonts\fontawesome-free\webfonts\fa-brands-400.eot" />
+    <Content Include="assets\fonts\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="assets\fonts\fontawesome-free\webfonts\fa-brands-400.woff" />
+    <Content Include="assets\fonts\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <Content Include="assets\fonts\fontawesome-free\webfonts\fa-regular-400.eot" />
+    <Content Include="assets\fonts\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="assets\fonts\fontawesome-free\webfonts\fa-regular-400.woff" />
+    <Content Include="assets\fonts\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <Content Include="assets\fonts\fontawesome-free\webfonts\fa-solid-900.eot" />
+    <Content Include="assets\fonts\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="assets\fonts\fontawesome-free\webfonts\fa-solid-900.woff" />
+    <Content Include="assets\fonts\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\images\bg\bg-g1.webp" />
+    <Content Include="assets\images\brand\partner-1.webp" />
+    <Content Include="assets\images\brand\partner-2.webp" />
+    <Content Include="assets\images\brand\partner-3.webp" />
+    <Content Include="assets\images\brand\partner-4.webp" />
+    <Content Include="assets\images\brand\partner-5.webp" />
+    <Content Include="assets\images\brand\partner-6.webp" />
+    <Content Include="assets\images\brand\partner-7.webp" />
+    <Content Include="assets\images\brand\partner-8.webp" />
+    <Content Include="assets\images\brand\partner-9.webp" />
+    <Content Include="assets\maps\style.css.map" />
+    <Content Include="assets\scss\blog\_blog-details.scss" />
+    <Content Include="assets\scss\blog\_blog.scss" />
+    <Content Include="assets\scss\blog\_post-default.scss" />
+    <Content Include="assets\scss\blog\_sidebar.scss" />
+    <Content Include="assets\scss\blog\_unit-test.scss" />
+    <Content Include="assets\scss\default\_animations.scss" />
+    <Content Include="assets\scss\default\_edu-common.scss" />
+    <Content Include="assets\scss\default\_extend.scss" />
+    <Content Include="assets\scss\default\_forms.scss" />
+    <Content Include="assets\scss\default\_mixins.scss" />
+    <Content Include="assets\scss\default\_reset.scss" />
+    <Content Include="assets\scss\default\_shortcode.scss" />
+    <Content Include="assets\scss\default\_spacing.scss" />
+    <Content Include="assets\scss\default\_text-animation.scss" />
+    <Content Include="assets\scss\default\_typography.scss" />
+    <Content Include="assets\scss\default\_variables.scss" />
+    <Content Include="assets\scss\elements\_404.scss" />
+    <Content Include="assets\scss\elements\_about.scss" />
+    <Content Include="assets\scss\elements\_accordion.scss" />
+    <Content Include="assets\scss\elements\_advance-tab.scss" />
+    <Content Include="assets\scss\elements\_backtotop.scss" />
+    <Content Include="assets\scss\elements\_badge.scss" />
+    <Content Include="assets\scss\elements\_brand.scss" />
+    <Content Include="assets\scss\elements\_brands.scss" />
+    <Content Include="assets\scss\elements\_breadcrumb.scss" />
+    <Content Include="assets\scss\elements\_button.scss" />
+    <Content Include="assets\scss\elements\_callto-action.scss" />
+    <Content Include="assets\scss\elements\_card-example.scss" />
+    <Content Include="assets\scss\elements\_card.scss" />
+    <Content Include="assets\scss\elements\_cart.scss" />
+    <Content Include="assets\scss\elements\_category-box.scss" />
+    <Content Include="assets\scss\elements\_category.scss" />
+    <Content Include="assets\scss\elements\_check-blog-section.scss" />
+    <Content Include="assets\scss\elements\_checkout.scss" />
+    <Content Include="assets\scss\elements\_connect-area.scss" />
+    <Content Include="assets\scss\elements\_contact.scss" />
+    <Content Include="assets\scss\elements\_countdown.scss" />
+    <Content Include="assets\scss\elements\_counterdown-area.scss" />
+    <Content Include="assets\scss\elements\_counterup.scss" />
+    <Content Include="assets\scss\elements\_course-filter.scss" />
+    <Content Include="assets\scss\elements\_course-meta.scss" />
+    <Content Include="assets\scss\elements\_feature.scss" />
+    <Content Include="assets\scss\elements\_image-gallery.scss" />
+    <Content Include="assets\scss\elements\_instagram.scss" />
+    <Content Include="assets\scss\elements\_lesson.scss" />
+    <Content Include="assets\scss\elements\_list.scss" />
+    <Content Include="assets\scss\elements\_modal.scss" />
+    <Content Include="assets\scss\elements\_newsletterform.scss" />
+    <Content Include="assets\scss\elements\_pagination.scss" />
+    <Content Include="assets\scss\elements\_portfolio.scss" />
+    <Content Include="assets\scss\elements\_pricingtable.scss" />
+    <Content Include="assets\scss\elements\_progressbar.scss" />
+    <Content Include="assets\scss\elements\_search.scss" />
+    <Content Include="assets\scss\elements\_section-title.scss" />
+    <Content Include="assets\scss\elements\_service.scss" />
+    <Content Include="assets\scss\elements\_slider.scss" />
+    <Content Include="assets\scss\elements\_social.scss" />
+    <Content Include="assets\scss\elements\_split.scss" />
+    <Content Include="assets\scss\elements\_swiper.scss" />
+    <Content Include="assets\scss\elements\_teacher-section.scss" />
+    <Content Include="assets\scss\elements\_team.scss" />
+    <Content Include="assets\scss\elements\_testimonial.scss" />
+    <Content Include="assets\scss\elements\_testimonials.scss" />
+    <Content Include="assets\scss\elements\_video.scss" />
+    <Content Include="assets\scss\footer\_back-to-top.scss" />
+    <Content Include="assets\scss\footer\_copyright.scss" />
+    <Content Include="assets\scss\footer\_dark.scss" />
+    <Content Include="assets\scss\footer\_footer.scss" />
+    <Content Include="assets\scss\header\common\_header-common.scss" />
+    <Content Include="assets\scss\header\common\_headertop.scss" />
+    <Content Include="assets\scss\header\common\_offertopbar.scss" />
+    <Content Include="assets\scss\header\headermiddle\_headermid.scss" />
+    <Content Include="assets\scss\header\topoffer\_offertopbar.scss" />
+    <Content Include="assets\scss\header\_header-common.scss" />
+    <Content Include="assets\scss\header\_header.scss" />
+    <Content Include="assets\scss\header\_headertop.scss" />
+    <Content Include="assets\scss\header\_headertopbar.scss" />
+    <Content Include="assets\scss\header\_mega-menu.scss" />
+    <Content Include="assets\scss\header\_mobilemenu.scss" />
+    <Content Include="assets\scss\header\_nav.scss" />
+    <Content Include="assets\scss\header\_offcanbas.scss" />
+    <Content Include="assets\scss\header\_offcanvas.scss" />
+    <Content Include="assets\scss\header\_offertopbar.scss" />
+    <Content Include="assets\scss\header\_one-page-navigation.scss" />
+    <Content Include="assets\scss\header\_search.scss" />
+    <Content Include="assets\scss\header\_social-share.scss" />
+    <Content Include="assets\scss\shop\_cart.scss" />
+    <Content Include="assets\scss\shop\_checkout.scss" />
+    <Content Include="assets\scss\shop\_minicart.scss" />
+    <Content Include="assets\scss\shop\_my-account.scss" />
+    <Content Include="assets\scss\shop\_product-details.scss" />
+    <Content Include="assets\scss\shop\_shop.scss" />
+    <Content Include="assets\scss\style.scss" />
+    <Content Include="assets\scss\template\_about-us.scss" />
+    <Content Include="assets\scss\template\_banner.scss" />
+    <Content Include="assets\scss\template\_blog-details.scss" />
+    <Content Include="assets\scss\template\_connect-area.scss" />
+    <Content Include="assets\scss\template\_contact-page.scss" />
+    <Content Include="assets\scss\template\_contact.scss" />
+    <Content Include="assets\scss\template\_course-action-bottom.scss" />
+    <Content Include="assets\scss\template\_course-details.scss" />
+    <Content Include="assets\scss\template\_course-sidebar.scss" />
+    <Content Include="assets\scss\template\_course-slidebar.scss" />
+    <Content Include="assets\scss\template\_error-page.scss" />
+    <Content Include="assets\scss\template\_events-details.scss" />
+    <Content Include="assets\scss\template\_events-page.scss" />
+    <Content Include="assets\scss\template\_grid-course.scss" />
+    <Content Include="assets\scss\template\_instructor-dashboard.scss" />
+    <Content Include="assets\scss\template\_lesson.scss" />
+    <Content Include="assets\scss\template\_list-course.scss" />
+    <Content Include="assets\scss\template\_login-page.scss" />
+    <Content Include="assets\scss\template\_my-account.scss" />
+    <Content Include="assets\scss\template\_preview.scss" />
+    <Content Include="assets\scss\template\_product-details.scss" />
+    <Content Include="assets\scss\template\_profile-page.scss" />
+    <Content Include="assets\scss\template\_register-page.scss" />
+    <Content Include="assets\scss\template\_shop-details.scss" />
+    <Content Include="assets\scss\template\_shop-page.scss" />
+    <Content Include="assets\scss\template\_shop.scss" />
+    <Content Include="assets\scss\template\_sidebar.scss" />
+    <Content Include="assets\scss\template\_single-zoom-section.scss" />
+    <Content Include="assets\scss\template\_teacher-details.scss" />
+    <Content Include="assets\scss\variation-page\_color.scss" />
+    <Content Include="assets\scss\variation-page\_demo-page.scss" />
+    <Content Include="doc\Placement-Stats-2022-23.pdf" />
+    <Content Include="WebForm1.aspx" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Index.aspx" />
+    <Content Include="internship.aspx" />
+    <Content Include="internshipinvite.aspx" />
+    <Content Include="intershippartner.aspx" />
+    <Content Include="mediacoverage.aspx" />
+    <Content Include="modern-equipped-computer-lab.jpg" />
+    <Content Include="placement-partner.jpeg" />
+    <Content Include="placementinvite.aspx" />
+    <Content Include="placementpartner.aspx" />
+    <Content Include="placementprt.jpeg" />
+    <Content Include="placementservices.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="TeamIIC.aspx" />
+    <Content Include="teckture-bg-2.png" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="careercounseling.aspx.cs">
+      <DependentUpon>careercounseling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="careercounseling.aspx.designer.cs">
+      <DependentUpon>careercounseling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="internship.aspx.cs">
+      <DependentUpon>internship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="internship.aspx.designer.cs">
+      <DependentUpon>internship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="internshipinvite.aspx.cs">
+      <DependentUpon>internshipinvite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="internshipinvite.aspx.designer.cs">
+      <DependentUpon>internshipinvite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="intershippartner.aspx.cs">
+      <DependentUpon>intershippartner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="intershippartner.aspx.designer.cs">
+      <DependentUpon>intershippartner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mediacoverage.aspx.cs">
+      <DependentUpon>mediacoverage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mediacoverage.aspx.designer.cs">
+      <DependentUpon>mediacoverage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="placementinvite.aspx.cs">
+      <DependentUpon>placementinvite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="placementinvite.aspx.designer.cs">
+      <DependentUpon>placementinvite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="placementpartner.aspx.cs">
+      <DependentUpon>placementpartner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="placementpartner.aspx.designer.cs">
+      <DependentUpon>placementpartner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="placementservices.aspx.cs">
+      <DependentUpon>placementservices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="placementservices.aspx.designer.cs">
+      <DependentUpon>placementservices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TeamIIC.aspx.cs">
+      <DependentUpon>TeamIIC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeamIIC.aspx.designer.cs">
+      <DependentUpon>TeamIIC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65029</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44393/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
